@@ -139,7 +139,7 @@ load(void *src, void *dst)
 static void
 load64(void *src, void *dst)
 {
-	util_atomic_load_explicit64((word *)src, (word *)dst,
+	util_atomic_load_explicit64((uint64_t *)src, (uint64_t *)dst,
 		memory_order_acquire);
 }
 
