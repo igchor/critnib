@@ -31,7 +31,11 @@ static int done=0;
 static word the1000[1000];
 static void* the1000p[1000];
 
-#define K 0xdeadbeefcafebabe
+#if __SIZEOF_SIZE_T__ == 8
+# define K 0xdeadbeefcafebabe
+#else
+# define K 0xcafebabe
+#endif
 
 /***********/
 /* threads */
